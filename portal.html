@@ -73,37 +73,7 @@
       min-width: max-content;
     }
     .tab.active { color: #061b0b; background: var(--yellow); border-color: var(--yellow); }
-    main { display: grid; grid-template-columns: 300px 1fr; gap: 0; min-height: 0; }
-    aside {
-      border-right: 1px solid var(--line);
-      padding: 18px;
-      overflow-y: auto;
-      background: rgba(7, 21, 6, .58);
-    }
-    .dash-grid { display: grid; gap: 10px; }
-    .dash-card {
-      display: block;
-      text-decoration: none;
-      color: var(--text);
-      padding: 14px;
-      min-height: 94px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--card);
-    }
-    .dash-card:hover { border-color: rgba(255, 201, 40, .65); }
-    .dash-card span {
-      display: block;
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      color: var(--yellow);
-      margin-bottom: 8px;
-    }
-    .dash-card strong { display: block; color: var(--muted); font-size: 13px; line-height: 1.35; font-weight: 600; }
-    .dash-card.verde { border-left: 4px solid var(--green); }
-    .dash-card.amarelo { border-left: 4px solid var(--yellow); }
-    .dash-card.azul { border-left: 4px solid var(--blue); }
+    main { display: block; min-height: 0; }
     .viewer { min-height: 0; background: #061207; position: relative; }
     .viewer-bar {
       height: 46px;
@@ -124,15 +94,10 @@
       body { overflow: auto; }
       .top { display: block; }
       .meta { text-align: left; margin-top: 10px; white-space: normal; }
-      main { grid-template-columns: 1fr; }
-      aside { border-right: 0; border-bottom: 1px solid var(--line); }
-      .dash-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       iframe { height: 72vh; }
     }
     @media (max-width: 560px) {
       header { padding: 18px 14px 12px; }
-      aside { padding: 14px; }
-      .dash-grid { grid-template-columns: 1fr; }
       .viewer-bar { align-items: flex-start; height: auto; padding: 12px 14px; flex-direction: column; }
       iframe { height: 76vh; }
     }
@@ -146,30 +111,11 @@
           <div class="brand">Pavanelo Agrocomercial</div>
           <h1>Central de Dashboards</h1>
         </div>
-        <div class="meta">Atualizado em 08/06/2026 16:33<br>Um link para todos os setores</div>
+        <div class="meta">Atualizado em 08/06/2026 16:49<br>Um link para todos os setores</div>
       </div>
       <nav class="tabs" aria-label="Dashboards"><button class="tab active" data-url="dashboard_mobile.html" data-title="Comercial" aria-selected="true">Comercial</button><button class="tab" data-url="cozinha.html" data-title="Cozinha / Tablet" aria-selected="false">Cozinha / Tablet</button><button class="tab" data-url="executivo.html" data-title="Executivo" aria-selected="false">Executivo</button><button class="tab" data-url="compras.html" data-title="Compras / ABC" aria-selected="false">Compras / ABC</button><button class="tab" data-url="relatorio_mensal.html" data-title="Relatorio Mensal" aria-selected="false">Relatorio Mensal</button><button class="tab" data-url="crm.html" data-title="CRM" aria-selected="false">CRM</button></nav>
     </header>
     <main>
-      <aside><div class="dash-grid"><a class="dash-card verde" href="dashboard_mobile.html" target="dashboardFrame" data-url="dashboard_mobile.html" data-title="Comercial">
-        <span>Comercial</span>
-        <strong>Faturamento diario, vendedores, CPF e acumulado do mes.</strong>
-      </a><a class="dash-card azul" href="cozinha.html" target="dashboardFrame" data-url="cozinha.html" data-title="Cozinha / Tablet">
-        <span>Cozinha / Tablet</span>
-        <strong>Pedidos, atendimento e rotina operacional da loja.</strong>
-      </a><a class="dash-card verde" href="executivo.html" target="dashboardFrame" data-url="executivo.html" data-title="Executivo">
-        <span>Executivo</span>
-        <strong>Visao geral de diretoria: vendas, lucro, caixa, clientes e produtos.</strong>
-      </a><a class="dash-card amarelo" href="compras.html" target="dashboardFrame" data-url="compras.html" data-title="Compras / ABC">
-        <span>Compras / ABC</span>
-        <strong>Curva ABC, prioridade de compra e revisao de preco/custo.</strong>
-      </a><a class="dash-card amarelo" href="relatorio_mensal.html" target="dashboardFrame" data-url="relatorio_mensal.html" data-title="Relatorio Mensal">
-        <span>Relatorio Mensal</span>
-        <strong>Fechamento gerencial com comparativo 2025 x 2026.</strong>
-      </a><a class="dash-card azul" href="crm.html" target="dashboardFrame" data-url="crm.html" data-title="CRM">
-        <span>CRM</span>
-        <strong>Clientes, WhatsApp, leads, inativos e oportunidades.</strong>
-      </a></div></aside>
       <section class="viewer">
         <div class="viewer-bar">
           <div><span class="viewer-title" id="viewerTitle">Comercial</span> <span id="viewerUrl">dashboard_mobile.html</span></div>
@@ -185,7 +131,6 @@
     const urlText = document.getElementById('viewerUrl');
     const openLink = document.getElementById('openLink');
     const tabs = Array.from(document.querySelectorAll('.tab'));
-    const cards = Array.from(document.querySelectorAll('.dash-card'));
     function abrirDashboard(url, nome) {
       frame.src = url;
       title.textContent = nome;
@@ -198,10 +143,6 @@
       });
     }
     tabs.forEach(tab => tab.addEventListener('click', () => abrirDashboard(tab.dataset.url, tab.dataset.title)));
-    cards.forEach(card => card.addEventListener('click', event => {
-      event.preventDefault();
-      abrirDashboard(card.dataset.url, card.dataset.title);
-    }));
   </script>
 </body>
 </html>
