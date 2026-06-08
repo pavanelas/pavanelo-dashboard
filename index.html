@@ -111,7 +111,7 @@
           <div class="brand">Pavanelo Agrocomercial</div>
           <h1>Central de Dashboards</h1>
         </div>
-        <div class="meta">Atualizado em 08/06/2026 17:20<br>Um link para todos os setores</div>
+        <div class="meta">Atualizado em 08/06/2026 17:40<br>Um link para todos os setores</div>
       </div>
       <nav class="tabs" aria-label="Dashboards"><button class="tab active" data-url="dashboard_mobile.html" data-title="Comercial" aria-selected="true">Comercial</button><button class="tab" data-url="cozinha.html" data-title="Cozinha / Tablet" aria-selected="false">Cozinha / Tablet</button><button class="tab" data-url="executivo.html" data-title="Executivo" aria-selected="false">Executivo</button><button class="tab" data-url="compras.html" data-title="Compras / ABC" aria-selected="false">Compras / ABC</button><button class="tab" data-url="relatorio_mensal.html" data-title="Relatorio Mensal" aria-selected="false">Relatorio Mensal</button><button class="tab" data-url="crm.html" data-title="CRM" aria-selected="false">CRM</button></nav>
     </header>
@@ -121,7 +121,7 @@
           <div><span class="viewer-title" id="viewerTitle">Comercial</span> <span id="viewerUrl">dashboard_mobile.html</span></div>
           <a class="open-link" id="openLink" href="dashboard_mobile.html" target="_blank">Abrir em tela cheia</a>
         </div>
-        <iframe id="dashboardFrame" name="dashboardFrame" src="dashboard_mobile.html" title="Dashboard Pavanelo"></iframe>
+        <iframe id="dashboardFrame" name="dashboardFrame" src="dashboard_mobile.html?v=20260608174051" title="Dashboard Pavanelo"></iframe>
       </section>
     </main>
   </div>
@@ -131,11 +131,16 @@
     const urlText = document.getElementById('viewerUrl');
     const openLink = document.getElementById('openLink');
     const tabs = Array.from(document.querySelectorAll('.tab'));
+    const cacheId = '20260608174051';
+    function comCache(url) {
+      const sep = url.includes('?') ? '&' : '?';
+      return `${url}${sep}v=${cacheId}`;
+    }
     function abrirDashboard(url, nome) {
-      frame.src = url;
+      frame.src = comCache(url);
       title.textContent = nome;
       urlText.textContent = url;
-      openLink.href = url;
+      openLink.href = comCache(url);
       tabs.forEach(t => {
         const ativo = t.dataset.url === url;
         t.classList.toggle('active', ativo);
