@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pavanelo | Vendedores</title>
+<style>
+  :root { --bg:#061b0b; --card:rgba(18,56,25,.72); --line:rgba(118,197,138,.24);
+    --text:#f4fff5; --muted:#a8c4b4; --green:#43e681; --yellow:#ffc928; --blue:#5aa2ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:linear-gradient(135deg,var(--bg),#071506 52%,#09210e);
+    color:var(--text); font-family:Arial,Helvetica,sans-serif; padding:22px; }
+  h1 { margin:0 0 2px; font-size:28px; }
+  .sub { color:var(--muted); font-size:13px; margin-bottom:20px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-bottom:24px; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .kpi .v { font-size:26px; font-weight:900; }
+  .kpi .l { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:1px; margin-top:4px; }
+  .kpi.green .v { color:var(--green); } .kpi.yellow .v { color:var(--yellow); } .kpi.blue .v { color:var(--blue); }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:16px; }
+  .panel h2 { font-size:18px; }
+  h3 { font-size:12px; color:var(--yellow); text-transform:uppercase; letter-spacing:1px; margin:12px 0 6px; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td { text-align:left; padding:5px 6px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:1px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:760px) { .grid2 { grid-template-columns:1fr; } }
+  .ins { margin-top:12px; font-size:13px; color:var(--text); line-height:1.9; }
+  .tag { display:inline-block; font-size:10px; font-weight:700; text-transform:uppercase;
+    letter-spacing:1px; padding:2px 7px; border-radius:5px; margin-right:6px; }
+  .tag.forte { background:rgba(67,230,129,.18); color:var(--green); }
+  .tag.fraco { background:rgba(255,201,40,.18); color:var(--yellow); }
+</style></head><body>
+  <h1>Vendedores</h1>
+  <div class="sub">Analise de desempenho por vendedor - periodo do relatorio - atualizado em 25/06/2026 13:51</div>
+  <div class="kpis">
+    <div class="kpi green"><div class="v">R$ 439.133,75</div><div class="l">Faturamento (itens)</div></div>
+    <div class="kpi blue"><div class="v">13</div><div class="l">Vendedores ativos</div></div>
+    <div class="kpi yellow"><div class="v">R$ 104,61</div><div class="l">Ticket medio da loja</div></div>
+    <div class="kpi"><div class="v" style="font-size:20px">Lauriane</div><div class="l">Maior faturamento</div></div>
+  </div>
+  <div class="panel">
+    <h2 style="color:#fff;margin-top:0">Ranking</h2>
+    <table><tr><th>Vendedor</th><th>Faturamento</th><th>Vendas</th><th>Ticket</th><th>Clientes</th><th>Categoria top</th></tr><tr><td><b>Lauriane</b></td><td>R$ 103.283,02</td><td>728</td><td>R$ 141,87</td><td>240</td><td><span style='color:#e6a14a'>Cerca_Campo</span></td></tr><tr><td><b>Alessandro</b></td><td>R$ 66.289,36</td><td>654</td><td>R$ 101,36</td><td>209</td><td><span style='color:#43e681'>Pet</span></td></tr><tr><td><b>Joao Pedro</b></td><td>R$ 65.654,94</td><td>645</td><td>R$ 101,79</td><td>277</td><td><span style='color:#43e681'>Pet</span></td></tr><tr><td><b>Edilson</b></td><td>R$ 64.728,10</td><td>712</td><td>R$ 90,91</td><td>172</td><td><span style='color:#ffc928'>Pecuaria</span></td></tr><tr><td><b>Italo</b></td><td>R$ 28.120,05</td><td>331</td><td>R$ 84,95</td><td>91</td><td><span style='color:#ffc928'>Pecuaria</span></td></tr><tr><td><b>Ricardo</b></td><td>R$ 25.948,86</td><td>250</td><td>R$ 103,80</td><td>123</td><td><span style='color:#5aa2ff'>Veterinaria</span></td></tr><tr><td><b>Kauan</b></td><td>R$ 25.089,31</td><td>258</td><td>R$ 97,25</td><td>86</td><td><span style='color:#ffc928'>Pecuaria</span></td></tr><tr><td><b>Wilson</b></td><td>R$ 23.467,51</td><td>250</td><td>R$ 93,87</td><td>170</td><td><span style='color:#5aa2ff'>Veterinaria</span></td></tr><tr><td><b>Edson</b></td><td>R$ 13.364,99</td><td>62</td><td>R$ 215,56</td><td>26</td><td><span style='color:#ffc928'>Pecuaria</span></td></tr><tr><td><b>Sandro</b></td><td>R$ 13.205,05</td><td>190</td><td>R$ 69,50</td><td>42</td><td><span style='color:#43e681'>Pet</span></td></tr><tr><td><b>Gabriel</b></td><td>R$ 7.442,56</td><td>72</td><td>R$ 103,37</td><td>33</td><td><span style='color:#5aa2ff'>Veterinaria</span></td></tr><tr><td><b>Marina</b></td><td>R$ 2.287,00</td><td>43</td><td>R$ 53,19</td><td>20</td><td><span style='color:#43e681'>Pet</span></td></tr><tr><td><b>Interior</b></td><td>R$ 253,00</td><td>3</td><td>R$ 84,33</td><td>3</td><td><span style='color:#ffc928'>Pecuaria</span></td></tr></table>
+    <div style="color:var(--muted);font-size:12px;margin-top:8px">Exclui Vendedor 80 (acerto contabil). Ticket = faturamento / nº de vendas.</div>
+  </div>
+  
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Lauriane</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 103.283,02 &middot; 728 vendas &middot;
+              ticket <span style="color:#43e681">R$ 141,87</span> (acima da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Cerca_Campo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:18%;height:8px;background:#e6a14a'></div></div></td><td style='text-align:right'>R$ 18.615,02</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:16%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 16.885,66</td></tr><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:16%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 16.407,57</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:14%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 14.682,13</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:11%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 11.578,60</td></tr><tr><td>Ferramentas</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:8%;height:8px;background:#9aa0a6'></div></div></td><td style='text-align:right'>R$ 8.654,59</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>SUBSTRATO MECPLANT/TABACO</td><td style='text-align:right'>R$ 5.880,87</td><td style='text-align:right;color:var(--muted)'>6%</td></tr><tr><td>BANDEJA ISOPOR 200 CELULA</td><td style='text-align:right'>R$ 4.836,90</td><td style='text-align:right;color:var(--muted)'>10%</td></tr><tr><td>MILHO EM GRAOS 50KG</td><td style='text-align:right'>R$ 4.003,62</td><td style='text-align:right;color:var(--muted)'>14%</td></tr><tr><td>LONA DUPLA FACE 8X100 200</td><td style='text-align:right'>R$ 3.275,20</td><td style='text-align:right;color:var(--muted)'>17%</td></tr><tr><td>SERRAFITA TROPIKAL MASTER</td><td style='text-align:right'>R$ 3.000,00</td><td style='text-align:right;color:var(--muted)'>20%</td></tr><tr><td>SEMENTES DE FUMO 17500 PE</td><td style='text-align:right'>R$ 2.860,00</td><td style='text-align:right;color:var(--muted)'>23%</td></tr><tr><td>CHAPA FOGAO VITRO CERAMIC</td><td style='text-align:right'>R$ 2.550,00</td><td style='text-align:right;color:var(--muted)'>26%</td></tr><tr><td>KOMANDER 25 KG</td><td style='text-align:right'>R$ 2.498,06</td><td style='text-align:right;color:var(--muted)'>28%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Ferramentas (8%), Cerca_Campo (18%), Agricultura (14%)<br>
+            <span class="tag fraco">Oportunidade</span> Veterinaria
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Alessandro</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 66.289,36 &middot; 654 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 101,36</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:21%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 13.900,00</td></tr><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:19%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 12.525,38</td></tr><tr><td>Fumo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:15%;height:8px;background:#c98bd8'></div></div></td><td style='text-align:right'>R$ 9.978,19</td></tr><tr><td>Cerca_Campo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:14%;height:8px;background:#e6a14a'></div></div></td><td style='text-align:right'>R$ 9.162,52</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:9%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 6.009,06</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:7%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 4.728,24</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>SEMENTES DE FUMO 17500 PE</td><td style='text-align:right'>R$ 8.633,84</td><td style='text-align:right;color:var(--muted)'>13%</td></tr><tr><td>LONA PRETA 2.40/FUNDO PIS</td><td style='text-align:right'>R$ 2.690,45</td><td style='text-align:right;color:var(--muted)'>17%</td></tr><tr><td>QUIRERA 50KG (MILHO MOIDO</td><td style='text-align:right'>R$ 2.239,34</td><td style='text-align:right;color:var(--muted)'>20%</td></tr><tr><td>FILME P/ ESTUFA 3 MT FUMA</td><td style='text-align:right'>R$ 1.822,87</td><td style='text-align:right;color:var(--muted)'>23%</td></tr><tr><td>SUBSTRATO MECPLANT/TABACO</td><td style='text-align:right'>R$ 1.799,50</td><td style='text-align:right;color:var(--muted)'>26%</td></tr><tr><td>MILHO EM GRAOS 50KG</td><td style='text-align:right'>R$ 1.190,78</td><td style='text-align:right;color:var(--muted)'>28%</td></tr><tr><td>FLUFFY CAT MIX 10KG</td><td style='text-align:right'>R$ 1.160,45</td><td style='text-align:right;color:var(--muted)'>29%</td></tr><tr><td>HAMBI PREMIUN RACAS PEQUE</td><td style='text-align:right'>R$ 1.036,56</td><td style='text-align:right;color:var(--muted)'>31%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Fumo (15%), Vestuario_Epi (7%), Aquarismo (2%)<br>
+            <span class="tag fraco">Oportunidade</span> Veterinaria
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Joao Pedro</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 65.654,94 &middot; 645 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 101,79</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:26%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 16.866,22</td></tr><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:24%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 15.447,62</td></tr><tr><td>Cerca_Campo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:15%;height:8px;background:#e6a14a'></div></div></td><td style='text-align:right'>R$ 9.641,26</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 6.691,28</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:9%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 5.779,51</td></tr><tr><td>Vestuario_Epi</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:4%;height:8px;background:#ff8a8a'></div></div></td><td style='text-align:right'>R$ 2.700,63</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>MILHO EM GRAOS 50KG</td><td style='text-align:right'>R$ 2.136,50</td><td style='text-align:right;color:var(--muted)'>3%</td></tr><tr><td>SUBSTRATO MECPLANT/TABACO</td><td style='text-align:right'>R$ 1.941,96</td><td style='text-align:right;color:var(--muted)'>6%</td></tr><tr><td>QUIRERA 50KG (MILHO MOIDO</td><td style='text-align:right'>R$ 1.907,34</td><td style='text-align:right;color:var(--muted)'>9%</td></tr><tr><td>FILME P/ ESTUFA 3 MT FUMA</td><td style='text-align:right'>R$ 1.473,96</td><td style='text-align:right;color:var(--muted)'>11%</td></tr><tr><td>LONA PRETA 2.40/FUNDO PIS</td><td style='text-align:right'>R$ 1.304,84</td><td style='text-align:right;color:var(--muted)'>13%</td></tr><tr><td>ELETRIFICADOR DE CERCA ZE</td><td style='text-align:right'>R$ 1.250,00</td><td style='text-align:right;color:var(--muted)'>15%</td></tr><tr><td>SUINO CN 38% 25KG (CRESCI</td><td style='text-align:right'>R$ 1.112,84</td><td style='text-align:right;color:var(--muted)'>17%</td></tr><tr><td>FILME P/ ESTUFA 10 MT LAR</td><td style='text-align:right'>R$ 1.111,55</td><td style='text-align:right;color:var(--muted)'>19%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Pet (26%)<br>
+            <span class="tag fraco">Oportunidade</span> Veterinaria
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Edilson</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 64.728,10 &middot; 712 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 90,91</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:22%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 14.420,38</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:21%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 13.748,01</td></tr><tr><td>Cerca_Campo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:11%;height:8px;background:#e6a14a'></div></div></td><td style='text-align:right'>R$ 7.073,74</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 6.656,11</td></tr><tr><td>Fumo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#c98bd8'></div></div></td><td style='text-align:right'>R$ 6.571,94</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 6.273,70</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>SEMENTES DE FUMO 17500 PE</td><td style='text-align:right'>R$ 4.404,35</td><td style='text-align:right;color:var(--muted)'>7%</td></tr><tr><td>SUBSTRATO MECPLANT/TABACO</td><td style='text-align:right'>R$ 2.992,00</td><td style='text-align:right;color:var(--muted)'>11%</td></tr><tr><td>SUINO CN 38% 25KG (CRESCI</td><td style='text-align:right'>R$ 1.803,00</td><td style='text-align:right;color:var(--muted)'>14%</td></tr><tr><td>QUIRERA 50KG (MILHO MOIDO</td><td style='text-align:right'>R$ 1.738,33</td><td style='text-align:right;color:var(--muted)'>17%</td></tr><tr><td>LONA PRETA 2.40/FUNDO PIS</td><td style='text-align:right'>R$ 1.737,14</td><td style='text-align:right;color:var(--muted)'>20%</td></tr><tr><td>FARELO DE TRIGO MOLINO RO</td><td style='text-align:right'>R$ 1.363,74</td><td style='text-align:right;color:var(--muted)'>22%</td></tr><tr><td>MILHO EM GRAOS 50KG</td><td style='text-align:right'>R$ 1.351,50</td><td style='text-align:right;color:var(--muted)'>24%</td></tr><tr><td>KOMANDER 25 KG</td><td style='text-align:right'>R$ 1.246,20</td><td style='text-align:right;color:var(--muted)'>26%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Fumo (10%), Controle_Pragas (2%), Aquarismo (2%)<br>
+            <span class="tag fraco">Oportunidade</span> Veterinaria
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Italo</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 28.120,05 &middot; 331 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 84,95</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:24%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 6.843,98</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:24%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 6.815,77</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:14%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 3.998,24</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 2.927,70</td></tr><tr><td>Cerca_Campo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:6%;height:8px;background:#e6a14a'></div></div></td><td style='text-align:right'>R$ 1.638,47</td></tr><tr><td>Vestuario_Epi</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:5%;height:8px;background:#ff8a8a'></div></div></td><td style='text-align:right'>R$ 1.477,90</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>KOMANDER 25 KG</td><td style='text-align:right'>R$ 1.099,40</td><td style='text-align:right;color:var(--muted)'>4%</td></tr><tr><td>BOTA SHALINE MASC. CANO D</td><td style='text-align:right'>R$ 679,00</td><td style='text-align:right;color:var(--muted)'>6%</td></tr><tr><td>SUBSTRATO MECPLANT/TABACO</td><td style='text-align:right'>R$ 674,52</td><td style='text-align:right;color:var(--muted)'>9%</td></tr><tr><td>QUIRERA 50KG (MILHO MOIDO</td><td style='text-align:right'>R$ 664,00</td><td style='text-align:right;color:var(--muted)'>11%</td></tr><tr><td>MILHO EM GRAOS 50KG</td><td style='text-align:right'>R$ 633,92</td><td style='text-align:right;color:var(--muted)'>13%</td></tr><tr><td>MINERAL EQUINOS VACCINAR</td><td style='text-align:right'>R$ 627,00</td><td style='text-align:right;color:var(--muted)'>16%</td></tr><tr><td>VACINA OCTUPLA NOBIVAC V8</td><td style='text-align:right'>R$ 600,00</td><td style='text-align:right;color:var(--muted)'>18%</td></tr><tr><td>BANDEJA SEMEADORA 200 CEL</td><td style='text-align:right'>R$ 599,00</td><td style='text-align:right;color:var(--muted)'>20%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Aves_Passaros (3%), Aquarismo (2%)<br>
+            <span class="tag fraco">Oportunidade</span> Cerca_Campo
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Ricardo</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 25.948,86 &middot; 250 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 103,80</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:34%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 8.887,51</td></tr><tr><td>Veterinaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:31%;height:8px;background:#5aa2ff'></div></div></td><td style='text-align:right'>R$ 8.015,14</td></tr><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:11%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 2.765,67</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 2.571,23</td></tr><tr><td>Fumo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:6%;height:8px;background:#c98bd8'></div></div></td><td style='text-align:right'>R$ 1.436,70</td></tr><tr><td>Cerca_Campo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:3%;height:8px;background:#e6a14a'></div></div></td><td style='text-align:right'>R$ 737,31</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>SEMENTES DE FUMO 17500 PE</td><td style='text-align:right'>R$ 1.180,00</td><td style='text-align:right;color:var(--muted)'>5%</td></tr><tr><td>SIMPARIC TRIO 12MG 5 A 10</td><td style='text-align:right'>R$ 649,64</td><td style='text-align:right;color:var(--muted)'>7%</td></tr><tr><td>MAXIMO POUR-ON BIOVET 1 L</td><td style='text-align:right'>R$ 553,28</td><td style='text-align:right;color:var(--muted)'>9%</td></tr><tr><td>SIMPARIC 80MG 20,1 A 40KG</td><td style='text-align:right'>R$ 480,56</td><td style='text-align:right;color:var(--muted)'>11%</td></tr><tr><td>SUINO CN 38% 25KG (CRESCI</td><td style='text-align:right'>R$ 451,60</td><td style='text-align:right;color:var(--muted)'>13%</td></tr><tr><td>DERMOTRAT CREME 20GR</td><td style='text-align:right'>R$ 432,10</td><td style='text-align:right;color:var(--muted)'>14%</td></tr><tr><td>ARAME FARPADO MOTTO 500MT</td><td style='text-align:right'>R$ 423,09</td><td style='text-align:right;color:var(--muted)'>16%</td></tr><tr><td>TAPETE HIG. GOOD PAD C/10</td><td style='text-align:right'>R$ 370,00</td><td style='text-align:right;color:var(--muted)'>17%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Veterinaria (31%), Controle_Pragas (2%)<br>
+            <span class="tag fraco">Oportunidade</span> Cerca_Campo, Agricultura
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Kauan</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 25.089,31 &middot; 258 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 97,25</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:25%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 6.275,76</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:21%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 5.208,54</td></tr><tr><td>Cerca_Campo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:14%;height:8px;background:#e6a14a'></div></div></td><td style='text-align:right'>R$ 3.466,91</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:12%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 2.955,02</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:9%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 2.182,69</td></tr><tr><td>Vestuario_Epi</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:6%;height:8px;background:#ff8a8a'></div></div></td><td style='text-align:right'>R$ 1.384,17</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>MILHO EM GRAOS 50KG</td><td style='text-align:right'>R$ 1.031,91</td><td style='text-align:right;color:var(--muted)'>4%</td></tr><tr><td>SUBSTRATO MECPLANT/TABACO</td><td style='text-align:right'>R$ 914,50</td><td style='text-align:right;color:var(--muted)'>8%</td></tr><tr><td>FILME P/ ESTUFA 3 MT FUMA</td><td style='text-align:right'>R$ 666,40</td><td style='text-align:right;color:var(--muted)'>10%</td></tr><tr><td>QUIRERA 50KG (MILHO MOIDO</td><td style='text-align:right'>R$ 664,00</td><td style='text-align:right;color:var(--muted)'>13%</td></tr><tr><td>PIQUE CN 25 KG</td><td style='text-align:right'>R$ 520,46</td><td style='text-align:right;color:var(--muted)'>15%</td></tr><tr><td>CAVALO VALLE EQUUS PIENSO</td><td style='text-align:right'>R$ 509,90</td><td style='text-align:right;color:var(--muted)'>17%</td></tr><tr><td>ARAME FARPADO ELEFANTE 40</td><td style='text-align:right'>R$ 499,00</td><td style='text-align:right;color:var(--muted)'>19%</td></tr><tr><td>SUINO CN 35% 25KG (ENGORD</td><td style='text-align:right'>R$ 498,56</td><td style='text-align:right;color:var(--muted)'>21%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Aquarismo (3%)<br>
+            <span class="tag fraco">Oportunidade</span> Veterinaria
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Wilson</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 23.467,51 &middot; 250 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 93,87</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:41%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 9.728,14</td></tr><tr><td>Veterinaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:34%;height:8px;background:#5aa2ff'></div></div></td><td style='text-align:right'>R$ 8.059,97</td></tr><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:11%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 2.495,68</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:8%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 1.890,65</td></tr><tr><td>Fumo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:2%;height:8px;background:#c98bd8'></div></div></td><td style='text-align:right'>R$ 388,71</td></tr><tr><td>Controle_Pragas</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:2%;height:8px;background:#ff6b6b'></div></div></td><td style='text-align:right'>R$ 308,80</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>ATENDIMENTO VETERINARIO</td><td style='text-align:right'>R$ 960,00</td><td style='text-align:right;color:var(--muted)'>4%</td></tr><tr><td>DIAZIL 50 ML</td><td style='text-align:right'>R$ 550,00</td><td style='text-align:right;color:var(--muted)'>6%</td></tr><tr><td>QUIRERA 50KG (MILHO MOIDO</td><td style='text-align:right'>R$ 498,00</td><td style='text-align:right;color:var(--muted)'>9%</td></tr><tr><td>VACINA OCTUPLA NOBIVAC V8</td><td style='text-align:right'>R$ 357,56</td><td style='text-align:right;color:var(--muted)'>10%</td></tr><tr><td>SORO ANTIOFIDICO LEMA 50</td><td style='text-align:right'>R$ 298,00</td><td style='text-align:right;color:var(--muted)'>11%</td></tr><tr><td>COURO LIMPO PULVERIZAÇAO</td><td style='text-align:right'>R$ 286,41</td><td style='text-align:right;color:var(--muted)'>13%</td></tr><tr><td>STOMORGYL 20MG COMP</td><td style='text-align:right'>R$ 284,20</td><td style='text-align:right;color:var(--muted)'>14%</td></tr><tr><td>SEMENTES DE FUMO 17500 PE</td><td style='text-align:right'>R$ 269,00</td><td style='text-align:right;color:var(--muted)'>15%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Veterinaria (34%)<br>
+            <span class="tag fraco">Oportunidade</span> Pet, Cerca_Campo, Agricultura
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Edson</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 13.364,99 &middot; 62 vendas &middot;
+              ticket <span style="color:#43e681">R$ 215,56</span> (acima da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:36%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 4.780,40</td></tr><tr><td>Veterinaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:28%;height:8px;background:#5aa2ff'></div></div></td><td style='text-align:right'>R$ 3.790,57</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:16%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 2.132,05</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:9%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 1.196,50</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:8%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 1.134,37</td></tr><tr><td>Fumo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:2%;height:8px;background:#c98bd8'></div></div></td><td style='text-align:right'>R$ 90,70</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>VACINA ANTIRABICA LEMA 1D</td><td style='text-align:right'>R$ 2.023,00</td><td style='text-align:right;color:var(--muted)'>15%</td></tr><tr><td>SUINO CN 35% 25KG (ENGORD</td><td style='text-align:right'>R$ 1.008,00</td><td style='text-align:right;color:var(--muted)'>23%</td></tr><tr><td>FLUFFY CAT MIX 25 KG</td><td style='text-align:right'>R$ 876,00</td><td style='text-align:right;color:var(--muted)'>29%</td></tr><tr><td>SUBSTRATO MECPLANT/TABACO</td><td style='text-align:right'>R$ 750,00</td><td style='text-align:right;color:var(--muted)'>35%</td></tr><tr><td>PIQUE CN 5 KG</td><td style='text-align:right'>R$ 645,00</td><td style='text-align:right;color:var(--muted)'>40%</td></tr><tr><td>PRO GALO 5 KG</td><td style='text-align:right'>R$ 509,00</td><td style='text-align:right;color:var(--muted)'>43%</td></tr><tr><td>MATEIRA COM SUPORTE - AUT</td><td style='text-align:right'>R$ 420,00</td><td style='text-align:right;color:var(--muted)'>47%</td></tr><tr><td>DMSO INJ. 500ML</td><td style='text-align:right'>R$ 389,00</td><td style='text-align:right;color:var(--muted)'>50%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Veterinaria (28%), Pecuaria (36%)<br>
+            <span class="tag fraco">Oportunidade</span> Pet, Cerca_Campo
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Sandro</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 13.205,05 &middot; 190 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 69,50</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:27%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 3.536,10</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:21%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 2.753,13</td></tr><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:18%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 2.346,38</td></tr><tr><td>Veterinaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#5aa2ff'></div></div></td><td style='text-align:right'>R$ 1.368,83</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:7%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 875,18</td></tr><tr><td>Vestuario_Epi</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:5%;height:8px;background:#ff8a8a'></div></div></td><td style='text-align:right'>R$ 652,20</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>PONCHO GOLA LAINAGE STELL</td><td style='text-align:right'>R$ 390,00</td><td style='text-align:right;color:var(--muted)'>3%</td></tr><tr><td>PORTA DE VIDRO P/FOGAO PE</td><td style='text-align:right'>R$ 320,00</td><td style='text-align:right;color:var(--muted)'>5%</td></tr><tr><td>PRIMER OVINOS IMPLANTE</td><td style='text-align:right'>R$ 320,00</td><td style='text-align:right;color:var(--muted)'>8%</td></tr><tr><td>HAMBI CAT PREMIUM MIX EM</td><td style='text-align:right'>R$ 310,47</td><td style='text-align:right;color:var(--muted)'>10%</td></tr><tr><td>FLUFFY EM KG</td><td style='text-align:right'>R$ 291,73</td><td style='text-align:right;color:var(--muted)'>12%</td></tr><tr><td>CAMISETA KING BRASIL C/PR</td><td style='text-align:right'>R$ 274,40</td><td style='text-align:right;color:var(--muted)'>14%</td></tr><tr><td>SINCRO ECG 30 ML</td><td style='text-align:right'>R$ 265,00</td><td style='text-align:right;color:var(--muted)'>16%</td></tr><tr><td>SUINO CN 38% 25KG (CRESCI</td><td style='text-align:right'>R$ 225,80</td><td style='text-align:right;color:var(--muted)'>18%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Veterinaria (10%)<br>
+            <span class="tag fraco">Oportunidade</span> Cerca_Campo
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Gabriel</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 7.442,56 &middot; 72 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 103,37</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Veterinaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:33%;height:8px;background:#5aa2ff'></div></div></td><td style='text-align:right'>R$ 2.458,80</td></tr><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:18%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 1.305,50</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:13%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 933,01</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:11%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 827,67</td></tr><tr><td>Vestuario_Epi</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#ff8a8a'></div></div></td><td style='text-align:right'>R$ 713,95</td></tr><tr><td>Cerca_Campo</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:5%;height:8px;background:#e6a14a'></div></div></td><td style='text-align:right'>R$ 376,21</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>ATENDIMENTO VETERINARIO</td><td style='text-align:right'>R$ 558,00</td><td style='text-align:right;color:var(--muted)'>7%</td></tr><tr><td>SAL COMUM 25KG</td><td style='text-align:right'>R$ 498,00</td><td style='text-align:right;color:var(--muted)'>14%</td></tr><tr><td>BOTINA ZEBU 90030 CAFE</td><td style='text-align:right'>R$ 322,42</td><td style='text-align:right;color:var(--muted)'>19%</td></tr><tr><td>AGEMOXI CL 250MG- COMP</td><td style='text-align:right'>R$ 305,20</td><td style='text-align:right;color:var(--muted)'>23%</td></tr><tr><td>SEMENTES DE FUMO 17500 PE</td><td style='text-align:right'>R$ 269,00</td><td style='text-align:right;color:var(--muted)'>26%</td></tr><tr><td>BOTINA ZEBU 88010 TERRA</td><td style='text-align:right'>R$ 263,62</td><td style='text-align:right;color:var(--muted)'>30%</td></tr><tr><td>ORGANNACT MILK 300GR (ORG</td><td style='text-align:right'>R$ 219,00</td><td style='text-align:right;color:var(--muted)'>33%</td></tr><tr><td>APOQUEL -3,6 GR-PARA ALER</td><td style='text-align:right'>R$ 218,00</td><td style='text-align:right;color:var(--muted)'>36%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Veterinaria (33%), Vestuario_Epi (10%)<br>
+            <span class="tag fraco">Oportunidade</span> Cerca_Campo, Agricultura
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Marina</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 2.287,00 &middot; 43 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 53,19</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:35%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 802,99</td></tr><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:27%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 618,90</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:15%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 348,51</td></tr><tr><td>Agricultura</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:11%;height:8px;background:#7bd88f'></div></div></td><td style='text-align:right'>R$ 241,80</td></tr><tr><td>Veterinaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:7%;height:8px;background:#5aa2ff'></div></div></td><td style='text-align:right'>R$ 148,80</td></tr><tr><td>Vestuario_Epi</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:4%;height:8px;background:#ff8a8a'></div></div></td><td style='text-align:right'>R$ 90,00</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>MILHO EM GRAOS 50KG</td><td style='text-align:right'>R$ 318,00</td><td style='text-align:right;color:var(--muted)'>14%</td></tr><tr><td>FLUFFY CAT MIX 10KG</td><td style='text-align:right'>R$ 179,80</td><td style='text-align:right;color:var(--muted)'>22%</td></tr><tr><td>QUIRERA 50KG (MILHO MOIDO</td><td style='text-align:right'>R$ 166,00</td><td style='text-align:right;color:var(--muted)'>29%</td></tr><tr><td>KOMANDER 25 KG</td><td style='text-align:right'>R$ 139,90</td><td style='text-align:right;color:var(--muted)'>35%</td></tr><tr><td>PREMIER AMB. INT. AD. DER</td><td style='text-align:right'>R$ 125,00</td><td style='text-align:right;color:var(--muted)'>41%</td></tr><tr><td>MUDAS DIVERSAS HORTALIÇAS</td><td style='text-align:right'>R$ 120,00</td><td style='text-align:right;color:var(--muted)'>46%</td></tr><tr><td>CALBENDAZOLE 10 1 LITRO</td><td style='text-align:right'>R$ 101,80</td><td style='text-align:right;color:var(--muted)'>50%</td></tr><tr><td>ORGANNACT LACTOBAC DOG PL</td><td style='text-align:right'>R$ 99,80</td><td style='text-align:right;color:var(--muted)'>55%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> Pet (35%), Pecuaria (27%)<br>
+            <span class="tag fraco">Oportunidade</span> Cerca_Campo
+          </div>
+        </div>
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+            <h2 style="color:#fff;margin:0">Interior</h2>
+            <div style="color:var(--muted);font-size:13px">R$ 253,00 &middot; 3 vendas &middot;
+              ticket <span style="color:#ffc928">R$ 84,33</span> (abaixo da media)</div>
+          </div>
+          <div class="grid2">
+            <div>
+              <h3>Mix de categorias</h3>
+              <table><tr><td>Pecuaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:67%;height:8px;background:#ffc928'></div></div></td><td style='text-align:right'>R$ 170,40</td></tr><tr><td>Outros</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:15%;height:8px;background:#6b7280'></div></div></td><td style='text-align:right'>R$ 37,90</td></tr><tr><td>Pet</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:10%;height:8px;background:#43e681'></div></div></td><td style='text-align:right'>R$ 24,90</td></tr><tr><td>Veterinaria</td><td style='width:45%'><div style='background:rgba(255,255,255,.08);border-radius:4px;height:8px;overflow:hidden'><div style='width:8%;height:8px;background:#5aa2ff'></div></div></td><td style='text-align:right'>R$ 19,80</td></tr></table>
+            </div>
+            <div>
+              <h3>Curva ABC - top produtos</h3>
+              <table><tr><td>MILHO EM GRAOS 50KG</td><td style='text-align:right'>R$ 79,50</td><td style='text-align:right;color:var(--muted)'>31%</td></tr><tr><td>FARELO DE TRIGO MOLINO RO</td><td style='text-align:right'>R$ 46,90</td><td style='text-align:right;color:var(--muted)'>50%</td></tr><tr><td>QUIRERA 25KG (MILHO MOIDO</td><td style='text-align:right'>R$ 44,00</td><td style='text-align:right;color:var(--muted)'>67%</td></tr><tr><td>CABO P/ MACHADO STARK</td><td style='text-align:right'>R$ 37,90</td><td style='text-align:right;color:var(--muted)'>82%</td></tr><tr><td>WHISKAS GATO CASTRADO KG</td><td style='text-align:right'>R$ 24,90</td><td style='text-align:right;color:var(--muted)'>92%</td></tr><tr><td>PROVERME SACHE 28GR</td><td style='text-align:right'>R$ 19,80</td><td style='text-align:right;color:var(--muted)'>100%</td></tr></table>
+            </div>
+          </div>
+          <div class="ins">
+            <span class="tag forte">Forte</span> perfil equilibrado<br>
+            <span class="tag fraco">Oportunidade</span> Cerca_Campo, Agricultura
+          </div>
+        </div>
+</body></html>
