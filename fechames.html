@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pavanelo | Fecha-Mês Jun/2026</title>
+  <style>
+    :root {
+      --bg:#061b0b; --card:rgba(18,56,25,.72); --line:rgba(118,197,138,.24);
+      --text:#f4fff5; --muted:#a8c4b4; --green:#43e681; --yellow:#ffc928;
+      --blue:#5aa2ff; --red:#ff6060; --shadow:0 18px 60px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:radial-gradient(circle at 22% 12%,rgba(67,230,129,.12),transparent 34%),
+          linear-gradient(135deg,var(--bg) 0%,#071506 52%,#09210e 100%);
+          color:var(--text);font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+    header{padding:20px 24px 0;border-bottom:1px solid var(--line);
+            background:rgba(6,27,11,.92)}
+    .brand{color:var(--yellow);font-size:11px;font-weight:800;letter-spacing:3px;
+            text-transform:uppercase;margin-bottom:6px}
+    h1{font-size:clamp(22px,3vw,36px);line-height:1;margin-bottom:4px}
+    .meta{color:var(--muted);font-size:12px;margin-bottom:14px}
+    /* tabs */
+    .tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:0}
+    .tab{border:1px solid var(--line);background:rgba(18,56,25,.64);color:var(--muted);
+          padding:9px 14px;border-radius:8px 8px 0 0;font-weight:800;cursor:pointer;
+          font-size:13px;white-space:nowrap;border-bottom:none}
+    .tab.active{color:#061b0b;background:var(--yellow);border-color:var(--yellow)}
+    /* panels */
+    .panel{display:none;padding:24px}
+    .panel.active{display:block}
+    /* kpi grid */
+    .kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-bottom:24px}
+    .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+    .kpi-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+    .kpi-val{font-size:24px;font-weight:900;line-height:1}
+    .kpi-sub{font-size:12px;color:var(--muted);margin-top:4px}
+    .kpi.destaque .kpi-val{color:var(--yellow)}
+    .kpi.verde .kpi-val{color:var(--green)}
+    .kpi.azul .kpi-val{color:var(--blue)}
+    .kpi.alerta .kpi-val{color:var(--red)}
+    /* section cards */
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
+    .card h3{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    /* bar chart */
+    .bars{display:flex;align-items:flex-end;gap:3px;height:160px;overflow-x:auto;padding-bottom:4px}
+    .bar-wrap{display:flex;flex-direction:column;align-items:center;min-width:24px;flex:1}
+    .bar-stack{display:flex;flex-direction:column;justify-content:flex-end;width:100%;border-radius:3px 3px 0 0;overflow:hidden}
+    .bar-prazo{background:var(--blue);opacity:.85}
+    .bar-vista{background:var(--green);opacity:.85}
+    .bar-label{font-size:9px;color:var(--muted);margin-top:3px}
+    /* table */
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    th{color:var(--muted);text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);font-size:11px;text-transform:uppercase}
+    td{padding:7px 8px;border-bottom:1px solid rgba(118,197,138,.1)}
+    tr:hover td{background:rgba(67,230,129,.05)}
+    .num{text-align:right;font-variant-numeric:tabular-nums}
+    /* pizza */
+    .pizza-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+    .legend{display:flex;flex-direction:column;gap:10px}
+    .leg-item{display:flex;align-items:center;gap:8px;font-size:13px}
+    .leg-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+    /* progress */
+    .pbar-wrap{margin-bottom:8px}
+    .pbar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px}
+    .pbar{height:14px;background:rgba(118,197,138,.15);border-radius:7px;overflow:hidden}
+    .pbar-fill{height:100%;border-radius:7px;transition:width .4s}
+    /* fake badge */
+    .fake-badge{background:rgba(255,96,96,.18);border:1px solid rgba(255,96,96,.4);
+                 color:var(--red);border-radius:8px;padding:10px 16px;font-size:12px;margin-bottom:16px}
+    @media(max-width:600px){.kpis{grid-template-columns:repeat(2,1fr)}.bars{height:110px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="brand">Pavanelo Agrocomercial</div>
+  <h1>Fecha-Mês — Jun/2026</h1>
+  <div class="meta">Gerado em 01/07/2026 09:21 &nbsp;·&nbsp; dados completos do mês</div>
+  <nav class="tabs">
+    <button class="tab active" data-tab="geral">Visão Geral</button>
+    <button class="tab" data-tab="diario">Evolução Diária</button>
+    <button class="tab" data-tab="produtos">Produtos</button>
+    <button class="tab" data-tab="pgto">Formas de Pgto</button>
+    <button class="tab" data-tab="vend">Vendedores</button>
+  </nav>
+</header>
+
+<div id="geral" class="panel active">
+  <div class="kpis" id="kpis-geral"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex-wrap:wrap" id="geral-cards"></div>
+</div>
+
+<div id="diario" class="panel">
+  <div class="card">
+    <h3>Faturamento por dia — Vista vs Prazo</h3>
+    <div class="bars" id="bars-diario"></div>
+  </div>
+  <div class="card">
+    <h3>Top 5 dias</h3>
+    <table id="tab-dias"></table>
+  </div>
+</div>
+
+<div id="produtos" class="panel">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div class="card">
+      <h3>Top 15 — Lucro Bruto (R$)</h3>
+      <div id="prod-lucro"></div>
+    </div>
+    <div class="card">
+      <h3>Top 10 — Maior Margem %</h3>
+      <div id="prod-marg"></div>
+    </div>
+  </div>
+</div>
+
+<div id="pgto" class="panel">
+  <div class="kpis" id="kpis-pgto"></div>
+  <div class="card">
+    <h3>Vista vs Prazo por dia</h3>
+    <div class="bars" id="bars-pgto"></div>
+  </div>
+</div>
+
+<div id="vend" class="panel">
+  <div id="fake-aviso"></div>
+  <div class="card">
+    <h3>Faturamento por Vendedor — Jun/2026</h3>
+    <div id="vend-bars"></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <table id="tab-vend"></table>
+  </div>
+</div>
+
+<script>
+const FAT   = 564420.74;
+const LUCRO = 224075.1;
+const CUSTO = 337783.49;
+const MARGEM= 39.7;
+const VISTA = 204752.5;
+const PRAZO = 359668.24;
+const TOT_VEND = 5224;
+const TICKET   = 108.04;
+const DIAS_UTEIS= 25;
+const MELHOR_DIA= 5;
+const MELHOR_TOT= 36557.95;
+const FAKE_TOT  = 15734.5;
+
+const DIAS    = [{"dia": 1, "itens": 1294.0, "vendas": 210.0, "vista": 12927.43, "prazo": 13502.11, "total": 26429.54}, {"dia": 2, "itens": 1122.0, "vendas": 218.0, "vista": 10380.79, "prazo": 12267.22, "total": 22648.01}, {"dia": 3, "itens": 2308.0, "vendas": 284.0, "vista": 9831.77, "prazo": 21326.92, "total": 31158.69}, {"dia": 4, "itens": 0.0, "vendas": 0.0, "vista": 0.0, "prazo": 0.0, "total": 0.0}, {"dia": 5, "itens": 2492.0, "vendas": 359.0, "vista": 10495.75, "prazo": 26062.2, "total": 36557.95}, {"dia": 6, "itens": 492.0, "vendas": 166.0, "vista": 6671.16, "prazo": 9485.92, "total": 16157.08}, {"dia": 7, "itens": 0.0, "vendas": 0.0, "vista": 0.0, "prazo": 0.0, "total": 0.0}, {"dia": 8, "itens": 1848.0, "vendas": 285.0, "vista": 9570.31, "prazo": 23903.65, "total": 33473.96}, {"dia": 9, "itens": 2558.0, "vendas": 204.0, "vista": 18567.25, "prazo": 13815.33, "total": 32382.58}, {"dia": 10, "itens": 969.0, "vendas": 201.0, "vista": 7808.74, "prazo": 10881.66, "total": 18690.4}, {"dia": 11, "itens": 1945.0, "vendas": 216.0, "vista": 5980.99, "prazo": 13987.0, "total": 19967.99}, {"dia": 12, "itens": 1610.0, "vendas": 262.0, "vista": 10231.5, "prazo": 16719.15, "total": 26950.65}, {"dia": 13, "itens": 1201.0, "vendas": 145.0, "vista": 6238.81, "prazo": 7698.84, "total": 13937.65}, {"dia": 14, "itens": 0.0, "vendas": 0.0, "vista": 0.0, "prazo": 0.0, "total": 0.0}, {"dia": 15, "itens": 1157.0, "vendas": 202.0, "vista": 6089.31, "prazo": 12858.25, "total": 18947.56}, {"dia": 16, "itens": 924.0, "vendas": 184.0, "vista": 4973.1, "prazo": 13283.55, "total": 18256.65}, {"dia": 17, "itens": 1004.0, "vendas": 186.0, "vista": 7512.06, "prazo": 14260.64, "total": 21772.7}, {"dia": 18, "itens": 990.0, "vendas": 195.0, "vista": 5129.42, "prazo": 17069.06, "total": 22198.48}, {"dia": 19, "itens": 1389.0, "vendas": 194.0, "vista": 6960.74, "prazo": 12461.86, "total": 19422.6}, {"dia": 20, "itens": 478.0, "vendas": 130.0, "vista": 3679.6, "prazo": 7731.53, "total": 11411.13}, {"dia": 21, "itens": 0.0, "vendas": 0.0, "vista": 0.0, "prazo": 0.0, "total": 0.0}, {"dia": 22, "itens": 819.0, "vendas": 202.0, "vista": 6276.92, "prazo": 12520.97, "total": 18797.89}, {"dia": 23, "itens": 1191.0, "vendas": 176.0, "vista": 5946.25, "prazo": 12224.46, "total": 18170.71}, {"dia": 24, "itens": 2408.0, "vendas": 202.0, "vista": 4140.9, "prazo": 25708.86, "total": 29849.76}, {"dia": 25, "itens": 1028.0, "vendas": 168.0, "vista": 9827.94, "prazo": 13071.84, "total": 22899.78}, {"dia": 26, "itens": 1954.0, "vendas": 251.0, "vista": 10171.02, "prazo": 16552.29, "total": 26723.31}, {"dia": 27, "itens": 991.0, "vendas": 163.0, "vista": 5989.15, "prazo": 8195.57, "total": 14184.72}, {"dia": 28, "itens": 0.0, "vendas": 0.0, "vista": 0.0, "prazo": 0.0, "total": 0.0}, {"dia": 29, "itens": 957.0, "vendas": 167.0, "vista": 6086.94, "prazo": 10557.0, "total": 16643.94}, {"dia": 30, "itens": 1427.0, "vendas": 254.0, "vista": 13264.65, "prazo": 13522.36, "total": 26787.01}, {"dia": 31, "itens": 0.0, "vendas": 0.0, "vista": 0.0, "prazo": 0.0, "total": 0.0}];
+const TOP15   = [{"prod": "SEMENTES DE FUMO 17500 PEL.", "lucro": 8790.36, "venda": 24509.19}, {"prod": "SUBSTRATO MECPLANT/TABACO 20KG", "lucro": 5797.46, "venda": 18351.7}, {"prod": "LONA PRETA 2.40/FUNDO PISCINA PADRAO", "lucro": 5109.86, "venda": 12485.58}, {"prod": "FLUFFY EM KG", "lucro": 3982.42, "venda": 6197.47}, {"prod": "FILME P/ ESTUFA 3 MT FUMAGEIRO-PADRAO", "lucro": 3613.32, "venda": 8065.12}, {"prod": "KOMANDER 25 KG", "lucro": 3542.09, "venda": 11541.63}, {"prod": "QUIRERA 50KG (MILHO MOIDO)", "lucro": 3506.28, "venda": 12686.28}, {"prod": "MILHO EM GRAOS 50KG", "lucro": 3322.93, "venda": 12809.65}, {"prod": "BANDEJA ISOPOR 200 CELULAS", "lucro": 3263.11, "venda": 8264.66}, {"prod": "SUINO CN 38% 25KG (CRESCIMENTO)", "lucro": 2527.01, "venda": 7637.21}, {"prod": "TALAGARCA ALGODAO 2,30 MT LARG.", "lucro": 2078.04, "venda": 4319.25}, {"prod": "FLUFFY CAT MIX 10KG", "lucro": 1947.1, "venda": 5827.6}, {"prod": "PIQUE CN 25 KG", "lucro": 1752.85, "venda": 5198.85}, {"prod": "SUBSTRATO CAROLINA PADRAO 9 KG 45 LITROS-14 BANDEJ", "lucro": 1709.88, "venda": 4281.38}, {"prod": "SUINO CN 35% 25KG (ENGORDA)", "lucro": 1703.17, "venda": 5691.57}];
+const TOPMARG = [{"prod": "MEDIDA DE HORTALICAS", "pct": 97.7, "lucro": 1405.21}, {"prod": "PEIXES ORNAMENTAIS", "pct": 87.5, "lucro": 1042.29}, {"prod": "MUDAS DE ERVA FISCALIZADA", "pct": 84.8, "lucro": 375.0}, {"prod": "ANIMAIS ORNAMENTAIS", "pct": 82.4, "lucro": 712.64}, {"prod": "PREDFARM 20MG COMP", "pct": 67.4, "lucro": 243.67}, {"prod": "MUDAS DIVERSAS HORTALI\u0080AS", "pct": 67.3, "lucro": 1430.77}, {"prod": "FLUFFY EM KG", "pct": 64.3, "lucro": 3982.42}, {"prod": "ISOLADOR TIPO W-MADEIRA -AMARELO E PRETO", "pct": 62.5, "lucro": 500.0}, {"prod": "ADUBO PARA PLANTAS KG", "pct": 62.3, "lucro": 373.23}, {"prod": "VACINA OCTUPLA POLY 10 E MULTI-DOG", "pct": 61.4, "lucro": 257.5}];
+const VENDEDORES = [{"cod": "133", "nome": "Lauriane", "tot": 100066.23, "vista": 29978.27, "prazo": 70087.96, "fake": false}, {"cod": "136", "nome": "Edilson", "tot": 65595.51, "vista": 25710.42, "prazo": 39885.09, "fake": false}, {"cod": "152", "nome": "Joao Pedro", "tot": 63877.19, "vista": 21183.02, "prazo": 42694.17, "fake": false}, {"cod": "145", "nome": "Alessandro", "tot": 60843.41, "vista": 20404.93, "prazo": 40438.48, "fake": false}, {"cod": "141", "nome": "Italo (teste)", "tot": 33436.78, "vista": 11109.71, "prazo": 22327.07, "fake": false}, {"cod": "95", "nome": "Ricardo", "tot": 28046.65, "vista": 8728.54, "prazo": 19318.11, "fake": false}, {"cod": "7", "nome": "Wilson", "tot": 23687.15, "vista": 6790.03, "prazo": 16897.12, "fake": false}, {"cod": "153", "nome": "Kauan", "tot": 17471.99, "vista": 7077.84, "prazo": 10394.15, "fake": false}, {"cod": "1", "nome": "Edson", "tot": 13337.29, "vista": 5425.9, "prazo": 7911.39, "fake": false}, {"cod": "122", "nome": "Sandro", "tot": 10529.04, "vista": 3906.3, "prazo": 6622.74, "fake": false}, {"cod": "5", "nome": "Gabriel", "tot": 7427.92, "vista": 1779.01, "prazo": 5648.91, "fake": false}, {"cod": "146", "nome": "Marina", "tot": 2693.8, "vista": 847.0, "prazo": 1846.8, "fake": false}, {"cod": "137", "nome": "Interior", "tot": 253.0, "vista": 0.0, "prazo": 253.0, "fake": false}];
+
+const brl = v => "R$ " + v.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = (a,b) => b ? (100*a/b).toFixed(1)+"%" : "—";
+
+// ── Tabs ─────────────────────────────────────────────────────────────────────
+document.querySelectorAll(".tab").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+    document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.tab).classList.add("active");
+  });
+});
+
+// ── KPI helper ───────────────────────────────────────────────────────────────
+function kpi(label, val, sub="", cls="destaque") {
+  return `<div class="kpi ${cls}"><div class="kpi-label">${label}</div>
+    <div class="kpi-val">${val}</div>
+    ${sub ? `<div class="kpi-sub">${sub}</div>` : ""}</div>`;
+}
+
+// ── Visão Geral ──────────────────────────────────────────────────────────────
+document.getElementById("kpis-geral").innerHTML = [
+  kpi("Faturamento", brl(FAT), "receita total do mês"),
+  kpi("Lucro Bruto",  brl(LUCRO), "margem " + MARGEM + "%", "verde"),
+  kpi("Custo das Mercadorias", brl(CUSTO), "CMV"),
+  kpi("À Vista",  brl(VISTA), pct(VISTA,FAT) + " das vendas", "azul"),
+  kpi("À Prazo",  brl(PRAZO), pct(PRAZO,FAT) + " das vendas"),
+  kpi("Dias Úteis", DIAS_UTEIS, "dias com movimento"),
+  kpi("Ticket Médio", brl(TICKET), TOT_VEND + " vendas no mês"),
+  kpi("Melhor Dia", "Dia " + MELHOR_DIA, brl(MELHOR_TOT), "verde"),
+].join("");
+
+document.getElementById("geral-cards").innerHTML = `
+  <div class="card">
+    <h3>Vista vs Prazo</h3>
+    ${pizzaSVG(VISTA, PRAZO)}
+  </div>
+  <div class="card">
+    <h3>Top 5 Produtos (Lucro)</h3>
+    ${TOP15.slice(0,5).map(r=>`<div class="pbar-wrap">
+      <div class="pbar-label"><span>${r.prod.slice(0,35)}</span><span>${brl(r.lucro)}</span></div>
+      <div class="pbar"><div class="pbar-fill" style="width:${(r.lucro/TOP15[0].lucro*100).toFixed(1)}%;background:var(--yellow)"></div></div>
+    </div>`).join("")}
+  </div>`;
+
+// ── Pizza SVG ────────────────────────────────────────────────────────────────
+function pizzaSVG(a, b) {
+  const tot = a + b;
+  const ang = 2*Math.PI*(a/tot);
+  const x1=50+46*Math.sin(0), y1=50-46*Math.cos(0);
+  const x2=50+46*Math.sin(ang), y2=50-46*Math.cos(ang);
+  const lg = ang > Math.PI ? 1 : 0;
+  return `<div class="pizza-row">
+    <svg width="110" height="110" viewBox="0 0 100 100">
+      <path d="M50,50 L${x1},${y1} A46,46 0 ${lg},1 ${x2},${y2} Z" fill="var(--green)" opacity=".85"/>
+      <path d="M50,50 L${x2},${y2} A46,46 0 ${1-lg},1 ${x1},${y1} Z" fill="var(--blue)" opacity=".85"/>
+    </svg>
+    <div class="legend">
+      <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>
+        <div><b>À Vista</b><br><span style="color:var(--muted)">${brl(a)} (${pct(a,tot)})</span></div></div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--blue)"></div>
+        <div><b>À Prazo</b><br><span style="color:var(--muted)">${brl(b)} (${pct(b,tot)})</span></div></div>
+    </div>
+  </div>`;
+}
+
+// ── Evolução Diária ───────────────────────────────────────────────────────────
+function renderBars(containerId, dias, maxVal) {
+  const wrap = document.getElementById(containerId);
+  const mx = maxVal || Math.max(...dias.map(d=>d.total));
+  wrap.innerHTML = dias.map(d => {
+    const h = d.total > 0 ? Math.max(4, Math.round(d.vista/mx*100)) : 0;
+    const hp = d.total > 0 ? Math.max(4, Math.round(d.prazo/mx*100)) : 0;
+    return `<div class="bar-wrap">
+      <div class="bar-stack" style="height:${h+hp}%">
+        <div class="bar-prazo" style="height:${hp/(h+hp)*100||0}%"></div>
+        <div class="bar-vista" style="height:${h/(h+hp)*100||0}%"></div>
+      </div>
+      <div class="bar-label">${d.dia}</div>
+    </div>`;
+  }).join("");
+}
+
+renderBars("bars-diario", DIAS);
+renderBars("bars-pgto", DIAS);
+
+// top5 dias
+const top5 = [...DIAS].filter(d=>d.total>0).sort((a,b)=>b.total-a.total).slice(0,5);
+document.getElementById("tab-dias").innerHTML = `
+  <tr><th>Dia</th><th class="num">Vendas</th><th class="num">Vista</th><th class="num">Prazo</th><th class="num">Total</th></tr>
+  ${top5.map(d=>`<tr>
+    <td><b>Dia ${d.dia}</b></td>
+    <td class="num">${d.vendas}</td>
+    <td class="num" style="color:var(--green)">${brl(d.vista)}</td>
+    <td class="num" style="color:var(--blue)">${brl(d.prazo)}</td>
+    <td class="num" style="color:var(--yellow)">${brl(d.total)}</td>
+  </tr>`).join("")}`;
+
+// ── Produtos ─────────────────────────────────────────────────────────────────
+const maxL = TOP15[0]?.lucro || 1;
+document.getElementById("prod-lucro").innerHTML = TOP15.map(r=>`
+  <div class="pbar-wrap">
+    <div class="pbar-label"><span style="font-size:11px">${r.prod.slice(0,38)}</span><span>${brl(r.lucro)}</span></div>
+    <div class="pbar"><div class="pbar-fill" style="width:${(r.lucro/maxL*100).toFixed(1)}%;background:var(--yellow)"></div></div>
+  </div>`).join("");
+
+const maxM = TOPMARG[0]?.pct || 1;
+document.getElementById("prod-marg").innerHTML = TOPMARG.map(r=>`
+  <div class="pbar-wrap">
+    <div class="pbar-label"><span style="font-size:11px">${r.prod.slice(0,38)}</span><span style="color:var(--green)">${r.pct}%</span></div>
+    <div class="pbar"><div class="pbar-fill" style="width:${(r.pct/maxM*100).toFixed(1)}%;background:var(--green)"></div></div>
+  </div>`).join("");
+
+// ── Formas de Pgto ───────────────────────────────────────────────────────────
+document.getElementById("kpis-pgto").innerHTML = [
+  kpi("À Vista Total",  brl(VISTA), pct(VISTA,FAT) + " do faturamento", "verde"),
+  kpi("À Prazo Total",  brl(PRAZO), pct(PRAZO,FAT) + " do faturamento", "azul"),
+  kpi("Total do Mês",   brl(FAT)),
+].join("");
+
+// ── Vendedores ────────────────────────────────────────────────────────────────
+if (FAKE_TOT > 0) {
+  document.getElementById("fake-aviso").innerHTML =
+    `<div class="fake-badge">⚠ Vendedor 80 (acerto contábil/FAKE) — ${brl(FAKE_TOT)} excluído dos totais abaixo.</div>`;
+}
+
+const maxV = VENDEDORES[0]?.tot || 1;
+document.getElementById("vend-bars").innerHTML = VENDEDORES.map(v=>`
+  <div class="pbar-wrap" style="margin-bottom:10px">
+    <div class="pbar-label"><span><b>${v.nome}</b></span><span>${brl(v.tot)}</span></div>
+    <div class="pbar" style="height:18px"><div class="pbar-fill" style="width:${(v.tot/maxV*100).toFixed(1)}%;background:var(--yellow)"></div></div>
+  </div>`).join("");
+
+const totReal = VENDEDORES.reduce((s,v)=>s+v.tot,0);
+document.getElementById("tab-vend").innerHTML = `
+  <tr><th>Vendedor</th><th class="num">Total</th><th class="num">À Vista</th><th class="num">À Prazo</th><th class="num">% Fat.</th></tr>
+  ${VENDEDORES.map(v=>`<tr>
+    <td><b>${v.nome}</b></td>
+    <td class="num" style="color:var(--yellow)">${brl(v.tot)}</td>
+    <td class="num" style="color:var(--green)">${brl(v.vista)}</td>
+    <td class="num" style="color:var(--blue)">${brl(v.prazo)}</td>
+    <td class="num">${pct(v.tot,totReal)}</td>
+  </tr>`).join("")}`;
+</script>
+</body>
+</html>
