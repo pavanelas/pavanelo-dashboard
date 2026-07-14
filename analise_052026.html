@@ -1,0 +1,76 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pavanelo | Analise de Maio/2026</title>
+<style>
+  :root { --bg:#061b0b; --card:rgba(18,56,25,.72); --line:rgba(118,197,138,.24);
+    --text:#f4fff5; --muted:#a8c4b4; --green:#43e681; --yellow:#ffc928; --blue:#5aa2ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:linear-gradient(135deg,var(--bg),#071506 55%,#09210e);
+    color:var(--text); font-family:Arial,Helvetica,sans-serif; padding:24px; max-width:1100px; margin:auto; }
+  h1 { margin:0; font-size:30px; }
+  .brand { color:var(--yellow); font-size:11px; font-weight:800; letter-spacing:3px; text-transform:uppercase; }
+  .sub { color:var(--muted); font-size:13px; margin-bottom:20px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:22px; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .kpi .v { font-size:22px; font-weight:900; }
+  .kpi .l { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:1px; margin-top:3px; }
+  .kpi .d { font-size:12px; margin-top:4px; font-weight:700; }
+  .kpi.yellow .v { color:var(--yellow); } .kpi.green .v { color:var(--green); } .kpi.blue .v { color:var(--blue); }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin-bottom:18px; }
+  .panel h2 { margin:0 0 12px; font-size:15px; color:var(--yellow); text-transform:uppercase; letter-spacing:1px; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media(max-width:800px){ .cols { grid-template-columns:1fr; } }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th,td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-size:11px; text-transform:uppercase; }
+  .num { text-align:right; font-variant-numeric:tabular-nums; }
+  .bars { display:flex; align-items:flex-end; gap:4px; height:150px; }
+  .bar { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; }
+  .bcol { width:75%; background:linear-gradient(#7ef0a8,var(--green)); border-radius:3px 3px 0 0; }
+  .bl { font-size:9px; color:var(--muted); margin-top:3px; }
+  .vp { display:flex; height:26px; border-radius:6px; overflow:hidden; margin-top:6px; }
+  .vp .v1 { background:var(--green); } .vp .v2 { background:var(--yellow); }
+  ul.ins li { margin:8px 0; line-height:1.5; }
+  ul.ac li { margin:8px 0; line-height:1.5; }
+  .big { border:2px solid var(--yellow); }
+</style></head><body>
+  <div class="brand">Pavanelo Agrocomercial</div>
+  <h1>Analise de Maio / 2026</h1>
+  <div class="sub">Fechamento com insights e comparativo &middot; gerado em 14/07/2026 10:28</div>
+
+  
+  <div class="kpis"><div class="kpi yellow"><div class="v">R$ 569.839,01</div><div class="l">Faturamento</div><div class="d"><span style="color:#ff6b6b">&#9660; 2%</span></div></div><div class="kpi green"><div class="v">R$ 230.999,84</div><div class="l">Lucro</div><div class="d"><span style="color:#ff6b6b">&#9660; 2%</span></div></div><div class="kpi green"><div class="v">40,7%</div><div class="l">Margem</div><div class="d"><span style="color:#43e681">&#9650; 0%</span></div></div><div class="kpi blue"><div class="v">5.295</div><div class="l">Vendas</div><div class="d"><span style="color:#ff6b6b">&#9660; 7%</span></div></div><div class="kpi "><div class="v">R$ 107,62</div><div class="l">Ticket medio</div><div class="d"><span style="color:#43e681">&#9650; 5%</span></div></div><div class="kpi blue"><div class="v">17,9%</div><div class="l">Cadastro CPF</div><div class="d"></div></div></div>
+
+  <div class="panel big">
+    <h2>&#128200; Destaques &amp; Insights</h2>
+    <ul class="ins"><li>Faturamento <b>caiu 2%</b> vs o mes anterior (R$ 581.638,41 &rarr; R$ 569.839,01).</li><li><b>62,2% das vendas foram a prazo</b> — carteira crescendo, olho na inadimplencia (ver painel de dividas).</li><li>Segmento que mais faturou: <b>PET</b> (R$ 126.766,12, 22,4% do total categorizado).</li><li>Vendedor destaque em faturamento: <b>Lauriane</b> (R$ 105.459,06).</li><li>Cadastro de CPF do mes: <b>17,9%</b> das vendas com cliente identificado — base pra CRM, campanhas e recompra.</li><li>Produto que mais deu lucro: <b>Sementes De Fumo 17500 Pel.</b> (R$ 5.166,20).</li></ul>
+  </div>
+
+  <div class="panel">
+    <h2>Evolucao diaria do faturamento</h2>
+    <div class="bars"><div class="bar"><div class="bcol" style="height:76px" title="Dia 2: R$ 23.344,40"></div><div class="bl">2</div></div><div class="bar"><div class="bcol" style="height:93px" title="Dia 4: R$ 28.734,77"></div><div class="bl">4</div></div><div class="bar"><div class="bcol" style="height:120px" title="Dia 5: R$ 37.017,78"></div><div class="bl">5</div></div><div class="bar"><div class="bcol" style="height:73px" title="Dia 6: R$ 22.627,80"></div><div class="bl">6</div></div><div class="bar"><div class="bcol" style="height:74px" title="Dia 7: R$ 22.883,34"></div><div class="bl">7</div></div><div class="bar"><div class="bcol" style="height:106px" title="Dia 8: R$ 32.720,34"></div><div class="bl">8</div></div><div class="bar"><div class="bcol" style="height:51px" title="Dia 9: R$ 15.848,38"></div><div class="bl">9</div></div><div class="bar"><div class="bcol" style="height:84px" title="Dia 11: R$ 25.791,97"></div><div class="bl">11</div></div><div class="bar"><div class="bcol" style="height:67px" title="Dia 12: R$ 20.583,68"></div><div class="bl">12</div></div><div class="bar"><div class="bcol" style="height:52px" title="Dia 13: R$ 16.177,76"></div><div class="bl">13</div></div><div class="bar"><div class="bcol" style="height:101px" title="Dia 14: R$ 31.295,38"></div><div class="bl">14</div></div><div class="bar"><div class="bcol" style="height:66px" title="Dia 15: R$ 20.415,95"></div><div class="bl">15</div></div><div class="bar"><div class="bcol" style="height:69px" title="Dia 16: R$ 21.131,92"></div><div class="bl">16</div></div><div class="bar"><div class="bcol" style="height:69px" title="Dia 18: R$ 21.192,28"></div><div class="bl">18</div></div><div class="bar"><div class="bcol" style="height:62px" title="Dia 19: R$ 19.180,26"></div><div class="bl">19</div></div><div class="bar"><div class="bcol" style="height:67px" title="Dia 20: R$ 20.762,71"></div><div class="bl">20</div></div><div class="bar"><div class="bcol" style="height:48px" title="Dia 21: R$ 14.772,73"></div><div class="bl">21</div></div><div class="bar"><div class="bcol" style="height:77px" title="Dia 22: R$ 23.785,76"></div><div class="bl">22</div></div><div class="bar"><div class="bcol" style="height:54px" title="Dia 23: R$ 16.722,54"></div><div class="bl">23</div></div><div class="bar"><div class="bcol" style="height:73px" title="Dia 25: R$ 22.652,20"></div><div class="bl">25</div></div><div class="bar"><div class="bcol" style="height:51px" title="Dia 26: R$ 15.856,12"></div><div class="bl">26</div></div><div class="bar"><div class="bcol" style="height:77px" title="Dia 27: R$ 23.762,84"></div><div class="bl">27</div></div><div class="bar"><div class="bcol" style="height:88px" title="Dia 28: R$ 27.170,51"></div><div class="bl">28</div></div><div class="bar"><div class="bcol" style="height:91px" title="Dia 29: R$ 28.138,25"></div><div class="bl">29</div></div><div class="bar"><div class="bcol" style="height:56px" title="Dia 30: R$ 17.269,34"></div><div class="bl">30</div></div></div>
+    <div class="vp"><div class="v1" style="width:38%"></div><div class="v2" style="width:62%"></div></div>
+    <div class="sub" style="margin-top:6px">A vista R$ 215.431,98 (37,8%) &middot; a prazo R$ 354.407,03 (62,2%)</div>
+  </div>
+
+  <div class="cols">
+    <div class="panel"><h2>Top produtos por lucro</h2><table><tr><td>Sementes De Fumo 17500 Pel.</td><td class='num'>R$ 5.166,20</td></tr><tr><td>Fluffy Em Kg</td><td class='num'>R$ 4.511,66</td></tr><tr><td>Quirera 50Kg (Milho Moido)</td><td class='num'>R$ 3.832,92</td></tr><tr><td>Komander 25 Kg</td><td class='num'>R$ 3.325,61</td></tr><tr><td>Milho Em Graos 50Kg</td><td class='num'>R$ 3.312,03</td></tr><tr><td>Suino Cn 38% 25Kg (Crescimento)</td><td class='num'>R$ 2.927,54</td></tr><tr><td>Lona Preta 2.40/Fundo Piscina Padrao</td><td class='num'>R$ 2.579,29</td></tr><tr><td>Substrato Mecplant/Tabaco 20Kg</td><td class='num'>R$ 2.420,66</td></tr><tr><td>Filme P/ Estufa 3 Mt Fumageiro-Padrao</td><td class='num'>R$ 2.414,04</td></tr><tr><td>Ordenha Milk Movel Mini C/1Conj.E 1 Tarr</td><td class='num'>R$ 2.368,03</td></tr><tr><td>Fluffy Cat Mix 10Kg</td><td class='num'>R$ 2.179,04</td></tr><tr><td>Fluffy Cat Mix 25 Kg</td><td class='num'>R$ 1.655,25</td></tr></table></div>
+    <div class="panel"><h2>Maiores margens</h2><table><tr><td>Servicos Do Veterinario</td><td class='num'>99,3%</td></tr><tr><td>Selaria - Peitoral</td><td class='num'>92,2%</td></tr><tr><td>Medida De Hortalicas</td><td class='num'>91,3%</td></tr><tr><td>Roupa Cao Soft</td><td class='num'>89,7%</td></tr><tr><td>Peixes Ornamentais</td><td class='num'>86,7%</td></tr><tr><td>Animais Ornamentais</td><td class='num'>85,9%</td></tr><tr><td>Mudas De Erva Fiscalizada</td><td class='num'>83,6%</td></tr><tr><td>Vacina Brucelose Rb51-5 Ds</td><td class='num'>69,5%</td></tr><tr><td>Fluffy Em Kg</td><td class='num'>64,4%</td></tr><tr><td>Adubo Para Plantas Kg</td><td class='num'>62,4%</td></tr></table></div>
+  </div>
+
+  <div class="panel"><h2>Vende muito, lucra pouco (revisar preco/custo)</h2>
+    <table><tr><th>Produto</th><th class="num">Venda</th><th class="num">Margem</th></tr><tr><td>Milho Em Graos 50Kg</td><td class='num'>R$ 12.798,75</td><td class='num' style='color:#ff8f8f'>25,9%</td></tr><tr><td>Cavalo Valle Equus Pienso 40Kg MelaAda</td><td class='num'>R$ 4.690,60</td><td class='num' style='color:#ff8f8f'>26,4%</td></tr><tr><td>Quirera 50Kg (Milho Moido)</td><td class='num'>R$ 14.092,92</td><td class='num' style='color:#ff8f8f'>27,2%</td></tr><tr><td>Quirera 25Kg (Milho Moido)</td><td class='num'>R$ 3.151,92</td><td class='num' style='color:#ff8f8f'>28,3%</td></tr><tr><td>Farelo De Trigo Molino Rosso/Uniao 30Kg</td><td class='num'>R$ 3.874,63</td><td class='num' style='color:#ff8f8f'>29,8%</td></tr><tr><td>Suino Cn 35% 25Kg (Engorda)</td><td class='num'>R$ 5.323,56</td><td class='num' style='color:#ff8f8f'>30,2%</td></tr><tr><td>Substrato Mecplant/Tabaco 20Kg</td><td class='num'>R$ 7.909,30</td><td class='num' style='color:#ff8f8f'>30,6%</td></tr><tr><td>Komander 25 Kg</td><td class='num'>R$ 10.485,81</td><td class='num' style='color:#ff8f8f'>31,7%</td></tr></table></div>
+
+  <div class="cols">
+    <div class="panel"><h2>Faturamento por segmento</h2>
+      <table><tr><th>Categoria</th><th class="num">Faturamento</th><th class="num">Share</th></tr><tr><td>Pet</td><td class='num'>R$ 126.766,12</td><td class='num'>22,4%</td></tr><tr><td>Outros</td><td class='num'>R$ 110.166,56</td><td class='num'>19,4%</td></tr><tr><td>Pecuaria</td><td class='num'>R$ 107.512,57</td><td class='num'>19,0%</td></tr><tr><td>Veterinaria</td><td class='num'>R$ 46.925,13</td><td class='num'>8,3%</td></tr><tr><td>Cerca_Campo</td><td class='num'>R$ 45.831,99</td><td class='num'>8,1%</td></tr><tr><td>Agricultura</td><td class='num'>R$ 34.257,14</td><td class='num'>6,0%</td></tr><tr><td>Vestuario_Epi</td><td class='num'>R$ 29.475,78</td><td class='num'>5,2%</td></tr><tr><td>Fumo</td><td class='num'>R$ 25.763,19</td><td class='num'>4,5%</td></tr><tr><td>Aquarismo</td><td class='num'>R$ 12.794,70</td><td class='num'>2,3%</td></tr><tr><td>Ferramentas</td><td class='num'>R$ 10.631,59</td><td class='num'>1,9%</td></tr><tr><td>Aves_Passaros</td><td class='num'>R$ 8.219,49</td><td class='num'>1,5%</td></tr><tr><td>Controle_Pragas</td><td class='num'>R$ 7.625,34</td><td class='num'>1,3%</td></tr><tr><td>Pesca</td><td class='num'>R$ 667,05</td><td class='num'>0,1%</td></tr></table></div>
+    <div class="panel"><h2>Vendedores</h2>
+      <table><tr><th>Vendedor</th><th class="num">Faturamento</th><th class="num">Vendas</th><th class="num">Lucro est.</th><th class="num">Cad%</th></tr><tr><td>Lauriane</td><td class='num'>R$ 105.459,06</td><td class='num'>957</td><td class='num'>R$ 42.963,32</td><td class='num'>19,6%</td></tr><tr><td>Alessandro</td><td class='num'>R$ 83.417,47</td><td class='num'>840</td><td class='num'>R$ 33.983,72</td><td class='num'>16,4%</td></tr><tr><td>Kauan</td><td class='num'>R$ 75.772,35</td><td class='num'>803</td><td class='num'>R$ 30.869,15</td><td class='num'>17,1%</td></tr><tr><td>Edilson</td><td class='num'>R$ 73.736,68</td><td class='num'>712</td><td class='num'>R$ 30.039,83</td><td class='num'>12,8%</td></tr><tr><td>Joao Pedro</td><td class='num'>R$ 60.879,69</td><td class='num'>633</td><td class='num'>R$ 24.801,98</td><td class='num'>18,3%</td></tr><tr><td>Ricardo</td><td class='num'>R$ 49.232,21</td><td class='num'>413</td><td class='num'>R$ 20.056,88</td><td class='num'>18,2%</td></tr><tr><td>Wilson</td><td class='num'>R$ 32.991,90</td><td class='num'>322</td><td class='num'>R$ 13.440,68</td><td class='num'>28,3%</td></tr><tr><td>Edson</td><td class='num'>R$ 27.314,90</td><td class='num'>107</td><td class='num'>R$ 11.127,91</td><td class='num'>30,8%</td></tr><tr><td>Sandro</td><td class='num'>R$ 21.064,87</td><td class='num'>286</td><td class='num'>R$ 8.581,69</td><td class='num'>12,9%</td></tr><tr><td>Gabriel</td><td class='num'>R$ 9.064,67</td><td class='num'>107</td><td class='num'>R$ 3.692,89</td><td class='num'>14,0%</td></tr><tr><td>Marina</td><td class='num'>R$ 4.589,90</td><td class='num'>67</td><td class='num'>R$ 1.869,89</td><td class='num'>23,9%</td></tr><tr><td>Interior</td><td class='num'>R$ 79,00</td><td class='num'>1</td><td class='num'>R$ 32,18</td><td class='num'>0,0%</td></tr></table></div>
+  </div>
+
+  <div class="panel big">
+    <h2>&#127919; Acoes para o proximo mes</h2>
+    <ul class="ac"><li>Revisar preco/custo de <b>Milho Em Graos 50Kg</b> e similares — vende muito (R$ 12.798,75) mas margem baixa (25,9%).</li><li>Reforcar cobranca da carteira a prazo (usar o painel de dividas e priorizar os maiores atrasos).</li><li>Cobrar cadastro de CPF de quem esta abaixo de 30%: Lauriane, Alessandro, Kauan.</li><li>Rodar o digest de leads das rotas diariamente e fechar os pedidos pendentes.</li><li>Contato pessoal dos vendedores com a lista OURO (clientes de alto valor).</li></ul>
+  </div>
+  <div class="sub">Lucro por vendedor = faturamento x margem media da loja (estimativa, nao temos custo por venda).</div>
+</body></html>
