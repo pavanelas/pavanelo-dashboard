@@ -10,9 +10,9 @@
   iframe{display:block;width:100%;height:calc(100vh - 54px);border:0;background:var(--bg);}
 </style></head><body>
   <div class="mps"><button class="mp" id="b012026" onclick="ver('012026')">Jan/26</button><button class="mp" id="b022026" onclick="ver('022026')">Fev/26</button><button class="mp" id="b032026" onclick="ver('032026')">Mar/26</button><button class="mp" id="b042026" onclick="ver('042026')">Abr/26</button><button class="mp" id="b052026" onclick="ver('052026')">Mai/26</button><button class="mp" id="b062026" onclick="ver('062026')">Jun/26</button><button class="mp active" id="b072026" onclick="ver('072026')">Jul/26 &#9679;</button></div>
-  <iframe id="fr" src="analise_072026.html?v=20260722183532"></iframe>
+  <iframe id="fr" src="analise_072026.html?v=20260723120910"></iframe>
   <script>
-    var cache='20260722183532';
+    var cache='20260723120910';
     function ver(m){
       document.getElementById('fr').src='analise_'+m+'.html?v='+cache;
       var bs=document.querySelectorAll('.mp'); for(var i=0;i<bs.length;i++)bs[i].classList.remove('active');
