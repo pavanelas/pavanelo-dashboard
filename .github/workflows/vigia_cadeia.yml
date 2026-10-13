@@ -1,0 +1,36 @@
+# Vigia da cadeia — roda no GitHub (fora do servidor).
+# Se o index.html do dashboard ficar mais de 5h sem ser atualizado pela cadeia,
+# o workflow FALHA e o GitHub manda e-mail para quem criou este arquivo.
+# Instalar: repo pavanelas/pavanelo-dashboard → Add file → Create new file →
+#           caminho .github/workflows/vigia_cadeia.yml → colar este conteúdo → Commit.
+name: Vigia da cadeia
+
+on:
+  schedule:
+    # Horário em UTC (Brasília = UTC-3): 12:45, 15:45 e 19:15 de segunda a sábado,
+    # logo depois dos ciclos das 12h, 15h e 18h30. Domingo a cadeia não roda.
+    - cron: '45 15,18 * * 1-6'
+    - cron: '15 22 * * 1-6'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Último upload da cadeia (index.html)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LIMITE_HORAS: '5'
+        run: |
+          ts=$(curl -fsS -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/commits?path=index.html&per_page=1" \
+            | jq -r '.[0].commit.committer.date')
+          idade=$(( ( $(date +%s) - $(date -d "$ts" +%s) ) / 3600 ))
+          echo "Último upload da cadeia: $ts (há ${idade}h)"
+          if [ "$idade" -ge "$LIMITE_HORAS" ]; then
+            echo "::error::CADEIA PARADA: dashboard sem atualizar há ${idade}h. Verificar servidor (ligado? usuário gabriel logado?)."
+            exit 1
+          fi
